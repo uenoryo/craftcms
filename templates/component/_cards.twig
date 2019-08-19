@@ -11,5 +11,9 @@
   </div>
 {% endfor %}
 
+{% if cards is empty %}
+  <div>見つかりませんでした</div>
+{% endif %}
+
 {% if paginator.prevUrl %}<a href="{{ paginator.prevUrl }}">前へ</a>{% endif %}
 {% if paginator.nextUrl %}<a href="{{ paginator.nextUrl }}">次へ</a>{% endif %}
