@@ -1,5 +1,13 @@
 <hr>
 
+{% set civilizations = craft
+    .categories()
+    .group('civilization')
+    .all() %}
+
 <div class="Footer">
-  footer
+  <h3>カードを探す</h3>
+  {% for civ in civilizations %}
+    <a href="{{ civ.url }}">{{ civ.title }}</a>
+  {% endfor %}
 </div>
