@@ -8,7 +8,7 @@
 
 {% set kind = entry
   .kind
-  .first() %}
+  .one() %}
 
 {% set civilizations = entry
   .civilization
@@ -16,7 +16,7 @@
 
 {% set restraint = entry
   .restraint
-  .first() %}
+  .one() %}
 
 <div>
   <img src="{{ mainImage.getUrl() }}" alt="{{ mainImage.title }}" width="200">
