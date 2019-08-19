@@ -1,6 +1,5 @@
 {% extends "layout/default" %}
 
-
 {% block content %}
 
 {% set civilization = category %}
@@ -17,16 +16,6 @@
 
 <h1>{{ civilization }}文明</h1>
 
-{% for card in cards %}
-  <div>
-    <a href="{{ card.url }}">
-      <h1>{{ card.title }}</h1>
-      <p>{{ card.effect }}</p>
-    </a>
-  </div>
-{% endfor %}
-
-{% if paginator.prevUrl %}<a href="{{ paginator.prevUrl }}">前へ</a>{% endif %}
-{% if paginator.nextUrl %}<a href="{{ paginator.nextUrl }}">次へ</a>{% endif %}
+{{ include("component/_cards", {cards: cards, paginator: paginator}) }}
 
 {% endblock %}
