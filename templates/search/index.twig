@@ -1,0 +1,21 @@
+{% extends "layout/default" %}
+
+{% block content %}
+
+{% set input = craft.app.request.getParam('q') %}
+
+{% set cardPerPage = 2 %}
+
+{% set query = craft
+  .entries
+  .section('card')
+  .search(input)
+  .limit(cardPerPage) %}
+
+{% paginate query as paginator, cards %}
+
+<h1>「{{ input }}」検索結果</h1>
+
+{{ include("component/_cards", {cards: cards, paginator: paginator}) }}
+
+{% endblock %}
