@@ -1,5 +1,23 @@
 {% extends "layout/default" %}
 
 {% block content %}
-  <h1>Home</h1>
+
+{% set cardPerPage = 2 %}
+{% set query = craft
+  .entries()
+  .section('card')
+  .limit(cardPerPage) %}
+
+{% paginate query as paginator, pageEntries %}
+
+{% for entry in pageEntries %}
+  <article>
+    <h1>{{ entry.title }}</h1>
+    <p>{{ entry.effect }}</p>
+  </article>
+{% endfor %}
+
+{% if paginator.prevUrl %}<a href="{{ paginator.prevUrl }}">前へ</a>{% endif %}
+{% if paginator.nextUrl %}<a href="{{ paginator.nextUrl }}">次へ</a>{% endif %}
+
 {% endblock %}
