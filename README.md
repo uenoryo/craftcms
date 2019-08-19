@@ -5,6 +5,7 @@
 ```sh
 composer install
 ./craft setup/security-key
+docker-compose exec app /var/phpapp/craft install/plugin redactor
 
 ```
 
