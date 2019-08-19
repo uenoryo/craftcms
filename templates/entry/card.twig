@@ -4,6 +4,8 @@
 
 {% set card = entry %}
 
+{% set mainImage = entry.main_image.one() %}
+
 {% set kind = entry
   .kind
   .first() %}
@@ -15,6 +17,10 @@
 {% set restraint = entry
   .restraint
   .first() %}
+
+<div>
+  <img src="{{ mainImage.getUrl() }}" alt="{{ mainImage.title }}" width="200">
+</div>
 
 <table>
   <tr>
