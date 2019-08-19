@@ -3,6 +3,8 @@
 
 {% block content %}
 
+{% set civilization = category %}
+
 {% set cardPerPage = 2 %}
 
 {% set query = craft
@@ -12,6 +14,8 @@
   .limit(cardPerPage) %}
 
 {% paginate query as paginator, cards %}
+
+<h1>{{ civilization }}文明</h1>
 
 {% for card in cards %}
   <div>
