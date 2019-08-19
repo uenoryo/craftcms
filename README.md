@@ -27,3 +27,10 @@ DB_DATABASE="app"
 ```
 
 * 画像ディレクトリ追加
+
+#### エディタのボタンの設定
+
+config/redactor/Standard.json or Simple.json にて設定 (フィールド設定時にどっちにするか選べる)
+
+ドキュメント
+https://imperavi.com/redactor/docs/settings/button/
