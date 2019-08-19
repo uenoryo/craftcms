@@ -11,10 +11,12 @@
 {% paginate query as paginator, pageEntries %}
 
 {% for entry in pageEntries %}
-  <article>
-    <h1>{{ entry.title }}</h1>
-    <p>{{ entry.effect }}</p>
-  </article>
+  <div>
+    <a href="{{ entry.url }}">
+      <h1>{{ entry.title }}</h1>
+      <p>{{ entry.effect }}</p>
+    </a>
+  </div>
 {% endfor %}
 
 {% if paginator.prevUrl %}<a href="{{ paginator.prevUrl }}">前へ</a>{% endif %}
