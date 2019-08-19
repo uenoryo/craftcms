@@ -42,7 +42,7 @@ RUN apt-get clean && \
 
 RUN usermod -u 1000 www-data
 
-WORKDIR /var/www
+WORKDIR /var/phpapp
 
 CMD ["php-fpm"]
 
