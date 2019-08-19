@@ -1,5 +1,50 @@
 {% extends "layout/default" %}
 
 {% block content %}
-  <h1>card</h1>
+
+{% set card = entry %}
+
+{% set kind = entry
+  .kind
+  .first() %}
+
+{% set civilizations = entry
+  .civilization
+  .all() %}
+
+{% set restraint = entry
+  .restraint
+  .first() %}
+
+<table>
+  <tr>
+    <th>種類</th>
+    <td>{{ kind }}</td>
+  </tr>
+  <tr>
+    <th>文明</th>
+    <td>
+      {% nav civ in civilizations %}
+        {{ civ }}
+      {% endnav %}
+    </td>
+  </tr>
+  <tr>
+    <th>コスト</th>
+    <td>{{ card.cost }}マナ</td>
+  </tr>
+  <tr>
+    <th>パワー</th>
+    <td>{{ card.power }}</td>
+  </tr>
+  <tr>
+    <th>効果</th>
+    <td>{{ card.effect }}</td>
+  </tr>
+  <tr>
+    <th>殿堂入り状況</th>
+    <td>{{ restraint ?? "-" }}</td>
+  </tr>
+</table>
+
 {% endblock %}
