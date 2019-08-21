@@ -1,6 +1,7 @@
 /.env
 /.idea
 /vendor
+/node_modules
 /web/image/*
 .DS_Store
 !.keep

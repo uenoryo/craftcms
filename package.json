@@ -1,0 +1,22 @@
+{
+  "name": "craftcms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:uenoryo/craftcms.git",
+  "author": "uenoryo <uenoryo@uma-b.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
+    "prod": "NODE_ENV=production  webpack --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "laravel-mix": "^4.1.2"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "3.1.0",
+    "sass": "^1.22.10",
+    "sass-loader": "7.*",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
