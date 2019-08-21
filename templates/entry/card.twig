@@ -3,6 +3,8 @@
 {% block content %}
 
 {% set card = entry %}
+
+{# アクセスをカウント https://github.com/putyourlightson/craft-entry-count #}
 {% do craft.entryCount.increment(card.id) %}
 
 {% set mainImage = entry.main_image.one() %}
