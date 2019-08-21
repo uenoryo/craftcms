@@ -1,9 +1,15 @@
 <hr>
 
 {% set civilizations = craft
-    .categories()
-    .group('civilization')
-    .all() %}
+  .categories()
+  .group('civilization')
+  .all() %}
+
+{% set popularCards = craft
+  .entryCount
+  .entries
+  .all() %}
+
 
 <div class="Footer">
   <h3>カードを探す</h3>
@@ -16,4 +22,16 @@
     <input type="search" name="q" placeholder="カード名など" required>
     <input type="submit" value="検索">
   </form>
+
+  <hr>
+
+  <h3>人気のカード</h3>
+
+  {% for card in popularCards %}
+    <div>
+      <a href="{{ card.url }}">{{ card.title }}</a>
+      ({{ craft.entryCount.count(card.id) }} views)
+    </div>
+  {% endfor %}
+
 </div>
