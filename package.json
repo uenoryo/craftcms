@@ -1,0 +1,12 @@
+{
+  "name": "craftcms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:uenoryo/craftcms.git",
+  "author": "uenoryo <uenoryo@uma-b.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "laravel-mix": "^4.1.2"
+  }
+}
