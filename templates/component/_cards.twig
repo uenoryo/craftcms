@@ -21,6 +21,7 @@
   {% endif %}
 </div>
 
-
-{% if paginator.prevUrl %}<a href="{{ paginator.prevUrl }}">前へ</a>{% endif %}
-{% if paginator.nextUrl %}<a href="{{ paginator.nextUrl }}">次へ</a>{% endif %}
+<div class="Paginator">
+  {% if paginator.prevUrl %}<a href="{{ paginator.prevUrl }}">前へ</a>{% endif %}
+  {% if paginator.nextUrl %}<a href="{{ paginator.nextUrl }}">次へ</a>{% endif %}
+</div>

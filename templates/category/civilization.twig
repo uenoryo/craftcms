@@ -14,7 +14,7 @@
 
 {% paginate query as paginator, cards %}
 
-<h1>{{ civilization }}文明</h1>
+<h1 class="Heading">{{ civilization }}文明</h1>
 
 <div class="Civilization Civilization--{{ civilization.slug }}">
   {{ include("component/_cards", {cards: cards, paginator: paginator}) }}
