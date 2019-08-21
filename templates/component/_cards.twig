@@ -2,18 +2,25 @@
 {# @param cards #}
 {# @param paginator #}
 
-{% for card in cards %}
-  <div>
-    <a href="{{ card.url }}">
-      <h1>{{ card.title }}</h1>
-      <p>{{ card.effect }}</p>
-    </a>
-  </div>
-{% endfor %}
+<div class="CardList">
+  {% for card in cards %}
+    {% set mainImage = card.main_image.one() %}
 
-{% if cards is empty %}
-  <div>見つかりませんでした</div>
-{% endif %}
+    <div class="CardList__Item">
+      <a href="{{ card.url }}">
+        <div>
+          <img src="{{ mainImage.getUrl() }}" alt="{{ mainImage.title }}" width="200">
+        </div>
+        <h3>{{ card.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+
+  {% if cards is empty %}
+    <div>見つかりませんでした</div>
+  {% endif %}
+</div>
+
 
 {% if paginator.prevUrl %}<a href="{{ paginator.prevUrl }}">前へ</a>{% endif %}
 {% if paginator.nextUrl %}<a href="{{ paginator.nextUrl }}">次へ</a>{% endif %}

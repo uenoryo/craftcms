@@ -8,3 +8,19 @@
   font-weight: bold;
 }
 
+.CardList {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.CardList__Item {
+  margin: 25px;
+}
+
+.CardList__Item h3 {
+  text-align: center;
+  margin: 0;
+}
+
