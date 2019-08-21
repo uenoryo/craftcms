@@ -3,6 +3,7 @@
 {% block content %}
 
 {% set card = entry %}
+{% do craft.entryCount.increment(card.id) %}
 
 {% set mainImage = entry.main_image.one() %}
 
