@@ -8,6 +8,32 @@
   font-weight: bold;
 }
 
+.Content {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/asset/image/bg/normalls.jpg");
+}
+
+.Content__Background--black {
+  background-image: url("/asset/image/bg/black.jpg");
+}
+
+.Content__Background--red {
+  background-image: url("/asset/image/bg/red.jpg");
+}
+
+.Content__Background--white {
+  background-image: url("/asset/image/bg/white.jpg");
+}
+
+.Content__Background--blue {
+  background-image: url("/asset/image/bg/blue.jpg");
+}
+
+.Content__Background--green {
+  background-image: url("/asset/image/bg/green.jpg");
+}
+
 .CardList {
   width: 600px;
   margin: 0 auto;

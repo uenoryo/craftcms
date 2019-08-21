@@ -9,6 +9,7 @@
     {% include "component/header" %}
   </header>
   <main>
+    <div class="Content {% if category is defined %}Content__Background--{{ category.slug }}{% endif %}">
     {% block content %}
     {% endblock %}
   </main>

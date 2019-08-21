@@ -16,6 +16,8 @@
 
 <h1>{{ civilization }}文明</h1>
 
-{{ include("component/_cards", {cards: cards, paginator: paginator}) }}
+<div class="Civilization Civilization--{{ civilization.slug }}">
+  {{ include("component/_cards", {cards: cards, paginator: paginator}) }}
+</div>
 
 {% endblock %}

@@ -7,6 +7,29 @@
   }
 }
 
+.Content {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/asset/image/bg/normalls.jpg");
+  &__Background {
+    &--black {
+      background-image: url("/asset/image/bg/black.jpg");
+    }
+    &--red {
+      background-image: url("/asset/image/bg/red.jpg");
+    }
+    &--white {
+      background-image: url("/asset/image/bg/white.jpg");
+    }
+    &--blue {
+      background-image: url("/asset/image/bg/blue.jpg");
+    }
+    &--green {
+      background-image: url("/asset/image/bg/green.jpg");
+    }
+  }
+}
+
 .CardList {
   width: 600px;
   margin: 0 auto;
@@ -21,4 +44,8 @@
       margin: 0;
     }
   }
+}
+
+.Civilization {
+  //
 }
