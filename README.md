@@ -38,3 +38,19 @@ config/redactor/Standard.json or Simple.json にて設定 (フィールド設定
 
 ドキュメント
 https://imperavi.com/redactor/docs/settings/button/
+
+#### アクセスカウント
+
+https://github.com/putyourlightson/craft-entry-count
+
+入れてviewに仕込む
+
+#### Contact form
+
+https://github.com/craftcms/contact-form
+
+```sh
+composer require craftcms/contact-form
+
+docker-compose exec app ./craft install/plugin contact-form
+```
