@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "920f06c7ae1e3d4bcc4b193b582ec891",
+    "content-hash": "2151f29fca1b896334f2d8628d090616",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -412,6 +412,57 @@
                 "yii2"
             ],
             "time": "2019-08-13T15:50:41+00:00"
+        },
+        {
+            "name": "craftcms/contact-form",
+            "version": "2.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/contact-form.git",
+                "reference": "a645df88d757d620bc29bc6dd3d748374b791093"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/contact-form/zipball/a645df88d757d620bc29bc6dd3d748374b791093",
+                "reference": "a645df88d757d620bc29bc6dd3d748374b791093",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC11"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Contact Form",
+                "handle": "contact-form",
+                "documentationUrl": "https://github.com/craftcms/contact-form/blob/v2/README.md",
+                "components": {
+                    "mailer": "craft\\contactform\\Mailer"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\contactform\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Add a simple contact form to your Craft CMS site",
+            "keywords": [
+                "cms",
+                "contact",
+                "craftcms",
+                "form",
+                "yii2"
+            ],
+            "time": "2019-05-31T22:56:39+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",

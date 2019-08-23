@@ -22,7 +22,8 @@
     "craftcms/cms": "^3.0.0",
     "vlucas/phpdotenv": "^3.4.0",
     "craftcms/redactor": "2.3.3.2",
-    "putyourlightson/craft-entry-count": "^2.0"
+    "putyourlightson/craft-entry-count": "^2.0",
+    "craftcms/contact-form": "^2.2"
   },
   "autoload": {
     "psr-4": {
